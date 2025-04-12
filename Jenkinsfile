@@ -18,7 +18,7 @@ pipeline {
                 echo '🔨 Building the project...'
                 bat '''
                     echo Compiling code...
-                    mkdir build
+                    if not exist build mkdir build
                     echo Build complete > build\\output.txt
                 '''
             }
